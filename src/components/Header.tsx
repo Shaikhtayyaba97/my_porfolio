@@ -21,8 +21,8 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Navigation Links */}
-        <nav className={`md:flex space-x-6 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
+        {/* Desktop Navigation Links (only visible on larger screens) */}
+        <nav className="hidden md:flex space-x-6">
           <ul className="flex space-x-6 md:space-x-10">
             <li>
               <Link href="/" className="hover:text-teal-200 transition duration-300">Home</Link>
@@ -36,7 +36,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* 3-Line Hamburger Icon for Mobile */}
+        {/* 3-Line Hamburger Icon for Mobile (Visible only on mobile screens) */}
         <div className="md:hidden flex flex-col items-center justify-center space-y-1" onClick={toggleMenu}>
           <div className="w-8 h-1 bg-white rounded-md"></div>
           <div className="w-8 h-1 bg-white rounded-md"></div>
