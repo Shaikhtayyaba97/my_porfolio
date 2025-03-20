@@ -36,11 +36,11 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Hamburger Icon for Mobile */}
-        <div className="md:hidden flex items-center" onClick={toggleMenu}>
-          <span className="block w-6 h-1 bg-white mb-1"></span>
-          <span className="block w-6 h-1 bg-white mb-1"></span>
-          <span className="block w-6 h-1 bg-white"></span>
+        {/* 3-Line Hamburger Icon for Mobile */}
+        <div className="md:hidden flex flex-col items-center justify-center space-y-1" onClick={toggleMenu}>
+          <div className="w-8 h-1 bg-white rounded-md"></div>
+          <div className="w-8 h-1 bg-white rounded-md"></div>
+          <div className="w-8 h-1 bg-white rounded-md"></div>
         </div>
       </div>
 
