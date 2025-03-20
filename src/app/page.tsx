@@ -25,7 +25,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-teal-700 mb-4">About Me</h2>
           <p className="text-lg text-gray-700 mb-8">
-            I am a dedicated web developer with a strong background in building interactive websites using modern technologies like  Next.js.
+            I am a dedicated web developer with a strong background in building interactive websites using modern technologies like  Next.js and sanity.
           </p>
           <div className="flex justify-center gap-10">
             {/* Skills */}
@@ -80,7 +80,7 @@ const Home = () => {
 
 <section id="portfolio" className="py-16 px-8 bg-gray-100">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-4xl font-bold text-teal-700 mb-8">Projects </h2>
+    <h2 className="text-4xl sm:text-lg font-bold text-teal-700 mb-8">Click here to view my projects </h2>
     <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-8">
       {/* Project 1 */}
       <div className="bg-white p-6 shadow-lg rounded-lg">
