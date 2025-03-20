@@ -13,11 +13,11 @@ const AboutPage = () => {
         {/* Profile Image Section */}
         <div className="flex justify-center mb-6">
           <Image
-            src="/profile.png"
+            src="/profile.png" // Replace with actual path to your image
             alt="Your Name"
-            width={50}
-            height={50}
-            className="rounded-full w-32 h-32 object-cover shadow-md"
+            width={128}  // Use larger size for better visibility
+            height={128} // Set a square image size
+            className="rounded-full object-cover shadow-md"
           />
         </div>
 
@@ -27,10 +27,10 @@ const AboutPage = () => {
             <h2 className="text-xl font-semibold text-teal-600">Career Journey</h2>
             <ul className="list-disc ml-6">
               <li>
-                <strong>Matriculation (2015)</strong>: Completed my high school education.
+                <strong>Matriculation (2014)</strong>: Completed my high school education.
               </li>
               <li>
-                <strong>Nursing Career (2015 - 2019)</strong>: Pursued nursing and gained hands-on experience in healthcare.
+                <strong>Nursing Career (2015 - 2029)</strong>: Pursued nursing and gained hands-on experience in healthcare.
               </li>
               <li>
                 <strong>Programming Shift (2024)</strong>: Transitioned to programming after discovering my passion for technology.
@@ -51,7 +51,7 @@ const AboutPage = () => {
           {/* Current Learning */}
           <div>
             <h2 className="text-xl font-semibold text-teal-600">Currently Learning</h2>
-            <p className="text-lg">I am currently expanding my skills in Python and full-stack development.</p>
+            <p className="text-lg">I&apos;m currently expanding my skills in Python and full-stack development.</p>
           </div>
 
           {/* Call to Action */}
@@ -60,7 +60,7 @@ const AboutPage = () => {
               href="http://linkedin.com/in/tayyaba-shahbaz-801a322b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               className="inline-block text-lg font-semibold text-teal-600 hover:text-teal-700"
             >
-              Let's Connect
+              Let&apos;s Connect
             </Link>
           </div>
         </div>
