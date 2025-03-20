@@ -138,7 +138,7 @@ const Home = () => {
       <section className="py-16 px-8 bg-teal-800 text-white text-center">
         <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
         <p className="text-lg mb-4">Feel free to reach out to discuss your project or if you have any questions!</p>
-        <Link href="mailto:tayyabashahbaz2020@gmail.com">
+        <Link href="/contact">
           <button className="bg-teal-600 hover:bg-teal-500 text-white py-3 px-6 rounded-full text-lg transition duration-300">Contact Me</button>
         </Link>
       </section>
