@@ -51,7 +51,7 @@ const AboutPage = () => {
           {/* Current Learning */}
           <div>
             <h2 className="text-xl font-semibold text-teal-600">Currently Learning</h2>
-            <p className="text-lg">I'm currently expanding my skills in Python and full-stack development.</p>
+            <p className="text-lg">I am currently expanding my skills in Python and full-stack development.</p>
           </div>
 
           {/* Call to Action */}
