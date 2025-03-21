@@ -102,7 +102,7 @@ const Home = () => {
 
       {/* Project 2 */}
       <div className="bg-white p-6 shadow-lg rounded-lg group overflow-hidden">
-        <Link href="https://yourproject2link.com">
+        <Link href="https://my-porfolio-eight-phi.vercel.app/">
           <div className="relative w-full h-48">
             <Image
               src="/portfolio.png"
