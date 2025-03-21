@@ -7,131 +7,85 @@ export default function HeroSection() {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    // Trigger the animations after some delay
     setTimeout(() => {
       setShowDescription(true);
-    }, 1000); // 1 second delay after name animation
+    }, 1000);
     setTimeout(() => {
       setShowButton(true);
-    }, 2000); // 2 seconds delay after description animation
+    }, 2000);
   }, []);
 
   return (
     <section
-      className="relative h-screen flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
+      className="relative h-screen flex flex-col justify-center items-center text-center text-white bg-cover bg-center px-6 sm:px-12 md:px-20"
       style={{
-        backgroundImage: "url('/hero.png')", // Ensure this path is correct
+        backgroundImage: "url('/hero.png')",
       }}
     >
-      {/* Background Image Overlay */}
-      <div className="absolute inset-0 bg-opacity-40"></div>
-     
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 px-4 sm:px-8 max-w-2xl mx-auto">
-        {/* Main Heading */}
+      <div className="relative z-10 max-w-3xl">
+        {/* Heading */}
         <h1
-          className={`text-5xl sm:text-6xl font-extrabold mb-6 text-shadow-lg slide-in-left ${
-            !showDescription ? "slide-out-left" : ""
-          }`}
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 slide-in-left ${
+            !showDescription ? "opacity-0" : "opacity-100"
+          } transition-opacity duration-1000`}
         >
-          Hello, I am Tayyaba Shahabaz
+          Hello, I am <span className="text-teal-400">Tayyaba Shahbaz</span>
         </h1>
 
         {/* Description */}
         {showDescription && (
           <p
-            className={`text-xl sm:text-2xl mb-6 text-lg md:text-xl leading-relaxed slide-in-right ${
-              !showButton ? "slide-out-right" : ""
-            }`}
+            className={`text-lg sm:text-xl md:text-2xl mb-6 leading-relaxed slide-in-right ${
+              !showButton ? "opacity-0" : "opacity-100"
+            } transition-opacity duration-1000`}
           >
-            A passionate web developer who loves building beautiful and
-            functional websites. I create modern, responsive, and user-friendly
-            websites that deliver a seamless experience.
+            A passionate web developer who creates modern, responsive, and
+            user-friendly websites with seamless experiences.
           </p>
         )}
 
         {/* Button */}
         {showButton && (
           <Link href="/#portfolio">
-            <button className="bg-teal-700 hover:bg-teal-600 text-white py-3 px-6 rounded-full text-lg transition duration-300 transform shadow-xl button-hover">
+            <button className="bg-teal-600 hover:bg-teal-500 text-white py-3 px-6 rounded-full text-lg font-medium transition duration-300 transform hover:scale-105 shadow-lg">
               View My Work
             </button>
           </Link>
         )}
       </div>
 
-      {/* Inline Style for Animations */}
+      {/* Animation Styles */}
       <style jsx>{`
-        /* Keyframes for sliding-in from left */
         @keyframes slideInLeft {
-          0% {
+          from {
             opacity: 0;
-            transform: translateX(-100%);
+            transform: translateX(-50px);
           }
-          100% {
+          to {
             opacity: 1;
             transform: translateX(0);
           }
         }
-
-        /* Keyframes for sliding-out to the left */
-        @keyframes slideOutLeft {
-          0% {
-            opacity: 1;
-            transform: translateX(0);
-          }
-          100% {
-            opacity: 0;
-            transform: translateX(-100%);
-          }
-        }
-
-        /* Keyframes for sliding-in from right */
-        @keyframes slideInRight {
-          0% {
-            opacity: 0;
-            transform: translateX(100%);
-          }
-          100% {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        /* Keyframes for sliding-out to the right */
-        @keyframes slideOutRight {
-          0% {
-            opacity: 1;
-            transform: translateX(0);
-          }
-          100% {
-            opacity: 0;
-            transform: translateX(100%);
-          }
-        }
-
-        /* Apply the slide-in effect */
         .slide-in-left {
-          animation: slideInLeft 1s ease-out forwards;
+          animation: slideInLeft 1s ease-out;
         }
 
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
         .slide-in-right {
-          animation: slideInRight 1s ease-out forwards;
-        }
-
-        /* Apply the slide-out effect */
-        .slide-out-left {
-          animation: slideOutLeft 1s ease-in forwards;
-        }
-
-        .slide-out-right {
-          animation: slideOutRight 1s ease-in forwards;
-        }
-
-        /* Button hover effect */
-        .button-hover:hover {
-          animation: buttonHover 0.3s ease-in-out;
+          animation: slideInRight 1s ease-out;
         }
       `}</style>
     </section>
